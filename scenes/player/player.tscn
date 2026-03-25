@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bctjci1j3q5c3"]
+
+[ext_resource type="Texture2D" uid="uid://xpyu6xdihmeq" path="res://assets/player images/player_idle_1.png" id="1_dovo2"]
+[ext_resource type="Texture2D" uid="uid://dhmef0710oeku" path="res://assets/player images/player_idle_2.png" id="2_gmlin"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lvxji"]
+animations = [{
+"frames": [{
+"duration": 3.0,
+"texture": ExtResource("1_dovo2")
+}, {
+"duration": 3.0,
+"texture": ExtResource("2_gmlin")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dovo2"]
+radius = 28.0
+height = 162.0
+
+[node name="Player" type="RigidBody2D" unique_id=617914168]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=388474987]
+sprite_frames = SubResource("SpriteFrames_lvxji")
+frame_progress = 0.44188038
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1808457587]
+position = Vector2(1, -1)
+shape = SubResource("CapsuleShape2D_dovo2")

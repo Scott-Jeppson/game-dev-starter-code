@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dclg8ifhosed0"]
+
+[ext_resource type="Texture2D" uid="uid://crbww4p0cgx2i" path="res://assets/terrain images/ground.png" id="1_5nsnt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l33sm"]
+size = Vector2(218, 91)
+
+[node name="ground" type="StaticBody2D" unique_id=1908723093]
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=817787509]
+texture = ExtResource("1_5nsnt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=748632832]
+position = Vector2(0, 37.5)
+shape = SubResource("RectangleShape2D_l33sm")

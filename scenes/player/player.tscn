@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bctjci1j3q5c3"]
 
 [ext_resource type="Texture2D" uid="uid://xpyu6xdihmeq" path="res://assets/player images/player_idle_1.png" id="1_dovo2"]
-[ext_resource type="Script" uid="uid://bca8idpbwi6yu" path="res://scenes/player/player.gd" id="1_gmlin"]
+[ext_resource type="Script" path="res://scenes/player/player.gd" id="1_gmlin"]
 [ext_resource type="Texture2D" uid="uid://dhmef0710oeku" path="res://assets/player images/player_idle_2.png" id="2_gmlin"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lvxji"]
@@ -35,4 +35,3 @@ shape = SubResource("RectangleShape2D_dovo2")
 
 [node name="groundDetector" type="RayCast2D" parent="." unique_id=1830010900]
 target_position = Vector2(0, 80)
-

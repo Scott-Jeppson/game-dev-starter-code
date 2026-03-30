@@ -18,8 +18,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmlin"]
-size = Vector2(65, 158)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
+size = Vector2(63, 158)
 
 [node name="Player" type="RigidBody2D" unique_id=617914168]
 script = ExtResource("1_gmlin")
@@ -31,7 +31,8 @@ frame_progress = 0.44188038
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1808457587]
 position = Vector2(0.5, -4)
-shape = SubResource("RectangleShape2D_gmlin")
+shape = SubResource("RectangleShape2D_dovo2")
 
 [node name="groundDetector" type="RayCast2D" parent="." unique_id=1830010900]
 target_position = Vector2(0, 80)
+

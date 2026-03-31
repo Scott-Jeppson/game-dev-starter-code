@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://bctjci1j3q5c3"]
 
 [ext_resource type="Texture2D" uid="uid://xpyu6xdihmeq" path="res://assets/player images/player_idle_1.png" id="1_dovo2"]
+[ext_resource type="Script" uid="uid://bca8idpbwi6yu" path="res://scenes/player/player.gd" id="1_gmlin"]
 [ext_resource type="Texture2D" uid="uid://dhmef0710oeku" path="res://assets/player images/player_idle_2.png" id="2_gmlin"]
+[ext_resource type="Texture2D" uid="uid://r0l6mj8fsnlb" path="res://assets/player images/player_running_1.png" id="4_p47bc"]
+[ext_resource type="Texture2D" uid="uid://48hdebdlqoo0" path="res://assets/player images/player_running_2.png" id="5_75vfm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lvxji"]
 animations = [{
@@ -15,17 +18,35 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 0.3,
+"texture": ExtResource("4_p47bc")
+}, {
+"duration": 0.3,
+"texture": ExtResource("5_75vfm")
+}],
+"loop": true,
+"name": &"running",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dovo2"]
 size = Vector2(63, 158)
 
 [node name="Player" type="RigidBody2D" unique_id=617914168]
+lock_rotation = true
+script = ExtResource("1_gmlin")
+metadata/_edit_group_ = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=388474987]
 sprite_frames = SubResource("SpriteFrames_lvxji")
-frame_progress = 0.44188038
+animation = &"running"
+frame_progress = 0.19146167
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1808457587]
 position = Vector2(0.5, -4)
 shape = SubResource("RectangleShape2D_dovo2")
+
+[node name="groundDetector" type="RayCast2D" parent="." unique_id=1830010900]
+target_position = Vector2(0, 75)

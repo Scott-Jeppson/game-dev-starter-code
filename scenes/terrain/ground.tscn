@@ -2,10 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://crbww4p0cgx2i" path="res://assets/terrain images/ground.png" id="1_5nsnt"]
 
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_5nsnt"]
+friction = 0.3
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l33sm"]
 size = Vector2(218, 91)
 
 [node name="ground" type="StaticBody2D" unique_id=1908723093]
+physics_material_override = SubResource("PhysicsMaterial_5nsnt")
 metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=817787509]

@@ -11,6 +11,7 @@ position = Vector2(0, -8)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=129906885]
 position = Vector2(0, 8)
+zoom = Vector2(0.5, 0.5)
 
 [node name="ground" parent="." unique_id=1908723093 instance=ExtResource("2_7tw3a")]
 z_index = 1
